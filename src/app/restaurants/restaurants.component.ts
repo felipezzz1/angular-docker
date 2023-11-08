@@ -1,4 +1,3 @@
-import { Component, OnInit} from '@angular/core';
 import { Restaurant } from './restaurant/restaurant.model';
 import { RestaurantsService } from './restaurants.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
@@ -11,7 +10,8 @@ import 'rxjs/add/operator/distinctUntilChanged'
 import 'rxjs/add/operator/catch'
 import 'rxjs/add/observable/from'
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { OnInit, Component } from '@angular/core';
 
 @Component({
   selector: 'mt-restaurants',
