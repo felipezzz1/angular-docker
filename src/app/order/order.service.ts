@@ -8,7 +8,6 @@ import 'rxjs/add/operator/map'
 
 import { MEAT_API } from "app/app.api";
 import { Injectable } from "@angular/core";
-import { LoginService } from "app/security/login/login.service";
 
 @Injectable()
 export class OrderService{
