@@ -21,6 +21,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './security/login/login.component';
+import { UserDetailComponent } from './header/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LoginComponent } from './security/login/login.component';
     OrderSummaryComponent,
     NotFoundComponent,
     LoginComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,
