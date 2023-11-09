@@ -4,7 +4,7 @@ import { Order } from "./order.model";
 import { Observable } from "rxjs";
 import { HttpClient, HttpHeaders} from "@angular/common/http";
 
-import 'rxjs/add/operator/map'
+import {map} from 'rxjs/operators'
 
 import { MEAT_API } from "app/app.api";
 import { Injectable } from "@angular/core";
@@ -34,7 +34,7 @@ export class OrderService{
     }
 
     checkOrder(order : Order) : Observable<string>{
-        return this.http.post<Order>(`${MEAT_API}/orders`, order).map(order=>order.id);
+        return this.http.post<Order>(`${MEAT_API}/orders`, order).pipe(map(order=>order.id));
     }
 
     clear(){
