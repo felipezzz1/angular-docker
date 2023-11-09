@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'mt-rating',
@@ -8,10 +8,10 @@ export class RatingComponent implements OnInit {
 
   @Output() rated = new EventEmitter<number>();
 
+  @Input() rate = 0;
+  
   rates: number[] = [1,2,3,4,5]
-
-  rate: number = 0;
-
+  
   previousRate: number;
 
   constructor() { }
