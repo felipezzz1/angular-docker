@@ -30,4 +30,3 @@ exports.config = {
     jasmine.getEnv().addReporter(new SpecReporter());
   }
 };
-
