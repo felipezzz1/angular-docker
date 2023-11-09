@@ -1,0 +1,2 @@
+backend atualizando automatico 
+nodemon --watch backend backend/dist/server.js

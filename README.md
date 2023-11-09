@@ -1,18 +1,36 @@
-# Meat - Angular App Starter
+# Meat - Angular App
 
 ## 1. Passos para começar
 
 ### Clonando o Repositório
 
-`git clone https://github.com/cod3rcursos/meat-app-starter.git`
+`git clone https://github.com/felipezzz1/angular-docker.git`
 
-### Instalando as Dependências
+### Criando um Dockerfile na pasta raiz
 
-`npm install`
+`FROM node:8`
+
+`WORKDIR /app`
+
+`COPY . .`
+
+`RUN npm install -g @angular/cli@1.2.7`
+
+`RUN npm install @angular/animations@4.3.3 @angular/compiler-cli@4.3.3 @angular/common@4.3.3 @angular/compiler@4.3.3 @angular/core@4.3.3 @angular/forms@4.3.3 @angular/platform-browser@4.3.3 @angular/platform-browser-dynamic@4.3.3 @angular/router@4.3.3`
+
+`RUN npm install -g typescript@2.4.2`
+
+`RUN npm install`
+
+`EXPOSE 4200`
+
+`CMD ["ng", "serve", "--host", "0.0.0.0", "--disable-host-check"]`
+
+### Iniciar o docker e criar a pasta node_modules
 
 ### Inicializando o Servidor
 
-`ng serve` ou `npm start`
+`ng serve --host 0.0.0.0 --disable-host-check` ou `npm start`
 
 ## 2. Iniciando o Backend
 
